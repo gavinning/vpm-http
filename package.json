@@ -1,0 +1,27 @@
+{
+  "name": "vpm-http",
+  "description": "vpm网络模块",
+  "main": "http.js",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "vpm -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gavinning/vpm-http.git"
+  },
+  "keywords": [
+    "vpm",
+    "vpm-http"
+  ],
+  "author": "gavinning",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/gavinning/vpm-http/issues"
+  },
+  "homepage": "https://github.com/gavinning/vpm-http",
+  "dependencies": {
+    "linco.lab": "~0.0.14",
+    "request": "^2.58.0"
+  }
+}
