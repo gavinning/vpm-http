@@ -5,7 +5,6 @@ var http = require('http');
 var request = require('request');
 
 
-
 /**
  * 下载
  * @param   {String}   url      下载地址
@@ -35,9 +34,7 @@ exports.upload = function(url, filepath, fn){
     try{
         fs.createReadStream(filepath).pipe(request.post(url, fn))
     }
-    catch(e){
-        fn(e)
-    }
+    catch(e){ fn(e) }
 }
 
 // 返回查询的信息
@@ -45,30 +42,10 @@ exports.query = function(url, fn){
     request(url, fn)
 }
 
-
-exports.login = function(){
-
+exports.reg = function(url, data, fn){
+    request.post({url: url, form: data}, fn)
 }
 
-exports.logout = function(){
-
-}
-
-exports.adduser = function(){
-
-}
-
-exports.getMac = function(){
-    var os = require('os');
-    var ip, mac;
-
-    for(var i=0;i<os.networkInterfaces().en0.length;i++){
-        if(os.networkInterfaces().en0[i].family=='IPv4'){
-            ip=os.networkInterfaces().en0[i].address;
-            mac=os.networkInterfaces().en0[i].mac;
-        }
-    }
-    console.log('----------local IP:', ip);
-    console.log('----------local MAC:', mac);
-    console.log('----------local host:', hostName);
+exports.login = function(url, data, fn){
+    request.post({url: url, form: data}, fn)
 }
