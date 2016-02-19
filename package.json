@@ -2,7 +2,7 @@
   "name": "vpm-http",
   "description": "vpm网络模块",
   "main": "http.js",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "scripts": {
     "test": "vpm -v"
   },
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/gavinning/vpm-http",
   "dependencies": {
     "linco.lab": "~0.0.14",
-    "request": "^2.58.0"
+    "request": "^2.58.0",
+    "aimee-class": "^1.2.0"
   }
 }

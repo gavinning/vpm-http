@@ -1,7 +1,5 @@
-#vpm-http
-
-支持[vpm](https://github.com/gavinning/vpm)网络活动部分任务
-
+### v2.0.0
+新增代理支持，除``upload``接口走直连外其他接口均可走代理
 ```
 var HTTP = require('vpm-http')
 var http = HTTP.instance({proxy: 'http://proxy.ilinco.com'})
