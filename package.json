@@ -2,7 +2,7 @@
   "name": "vpm-http",
   "description": "vpm网络模块",
   "main": "http.js",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "scripts": {
     "test": "vpm -v"
   },

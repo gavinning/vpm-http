@@ -47,6 +47,20 @@ App.include({
         catch(e){ fn(e) }
     },
 
+    /**
+     * 模拟Form表单上传
+     * @param   {String|Object}   url|options   上传接口|Request.Options，参看request.api
+     * @param   {Object}          options       上传目标文件路径
+     * @param   {Function}        fn            回调函数
+     */
+    form: function(url, options, fn){
+        var r = request.post(url, fn);
+        var form = r.form();
+        form.append('field', options.field);
+        form.append('files', fs.createReadStream(options.filepath));
+        return form;
+    },
+
     // 返回查询的信息
     query: function(url, fn){
         this.request(url, fn)
